@@ -1,0 +1,166 @@
+/* ====================== header & nav mobile base element style ====================== */
+
+.mobile_header {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: white;
+}
+
+.mobile_header .search {
+  width: 0;
+  top: 7px;
+  height: 40px;
+  padding: 10px 20px 20px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  background-image: url(../images/search.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 32px;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.mobile_header .search:focus {
+  width: calc(100% - 20px);
+  padding: 8px 48px 8px 20px;
+  border: solid 1px #979797;
+  left: 10px;
+  cursor: text;
+}
+
+.mobile_nav {
+  position: fixed;
+  height: 50px;
+  top: 52px;
+  background-color: #313538;
+  width: 100%;
+  display: flex;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+}
+
+.mobile_nav .tag {
+  font-size: 16px;
+  color: #828282;
+  flex-grow: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mobile_nav .tag:hover {
+  color: white;
+}
+
+.mobile_nav .tag_accessories,
+.mobile_nav .tag_men {
+  border-left: 2px solid #828282;
+}
+
+@media only screen and (min-width: 1280px) {
+  .mobile_header,
+  .mobile_nav {
+    display: none;
+  }
+}
+
+/* ====================== header & nav desktop base element style ====================== */
+
+.desktop_header {
+  display: none;
+}
+
+@media only screen and (min-width: 1280px) {
+  .desktop_header {
+    height: 140px;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    border-bottom: 40px solid #313538;
+    background-color: white;
+    font-weight: bold;
+  }
+  .desktop_header > .logo {
+    margin-left: 60px;
+    margin-top: 26px;
+  }
+  .desktop_header > .nav {
+    margin-left: 96px;
+    margin-top: 44px;
+    display: flex;
+  }
+  .desktop_header > .nav > .tag {
+    letter-spacing: 30px;
+    font-size: 20px;
+    color: #3f3a3a;
+    line-height: 28px;
+  }
+  .desktop_header > .nav > a:hover{
+    text-decoration: underline;
+  }
+  .desktop_header > .nav > .tag_line {
+    width: 34px;
+    font-size: 20px;
+    color: #3f3a3a;
+    line-height: 28px;
+    margin-left: 11px;
+    margin-right: 5px;
+  }
+  .desktop_header form {
+    margin-left: auto;
+    margin-top: 30px;
+  }
+  .desktop_header .search {
+    width: 214px;
+    height: 40px;
+    padding: 8px 48px 8px 20px;
+    border: solid 1px #979797;
+    border-radius: 20px;
+    outline: none;
+    font-size: 20px;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .desktop_header .cart {
+    margin-top: 28px;
+    margin-left: 42px;
+    position: relative;
+  }
+  .desktop_header .count {
+    position: absolute;
+    text-align: center;
+    background-color: #8b572a;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #ffffff;
+    opacity: 0.8;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    bottom: 0;
+    right: 0;
+  }
+  .desktop_header .member {
+    margin-top: 28px;
+    margin-left: 42px;
+    margin-right: 54px;
+    cursor: pointer;
+  }
+  .desktop_header .member:active {
+    border-style: dotted;
+  }
+}

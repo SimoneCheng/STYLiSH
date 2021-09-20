@@ -1,0 +1,21 @@
+.loading_bar {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/ajax-loader.gif);
+  background-position: 50% 50%;
+  background-color: rgb(255, 255, 255, 0.8);
+  background-repeat: no-repeat;
+}
+
+main.loading {
+    overflow: hidden;
+}
+
+main.loading .loading_bar {
+    display: block;
+}

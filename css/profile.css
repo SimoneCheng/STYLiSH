@@ -1,0 +1,55 @@
+.profile {
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.profile > h2 {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #979797;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile > #member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.profile > #member > img {
+  width: 200px;
+  margin: 0 24px;
+}
+
+.profile > #member > .member_detail > h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 24px 0;
+}
+
+.profile > #member > .member_detail > button {
+  width: 60px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 8px;
+}
+
+/* ====================== main base element style ====================== */
+
+main {
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    margin-top: 100px;
+  }
+}

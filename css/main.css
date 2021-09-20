@@ -1,0 +1,161 @@
+/* ====================== campaigns promotion base element style ====================== */
+
+#campaigns {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 185px;
+  position: relative;
+}
+
+#campaigns .campaign {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s;
+  z-index: 1;
+}
+
+#campaigns .campaign.campaign--active {
+  opacity: 1;
+  z-index: 2;
+}
+
+#campaigns > .dots {
+  position: absolute;
+  bottom: 14px;
+  left: calc(50% - 35.976px / 2);
+  display: flex;
+  z-index: 3;
+  cursor: pointer;
+}
+
+#campaigns > .dots > .dot.dot--active {
+  background-color: #8b572a;
+  z-index: 4;
+}
+
+#campaigns > .dots > .dot {
+  width: 4px;
+  height: 4px;
+  margin: 0 4px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+#campaigns .campaign .campaign_story {
+  width: 100%;
+  max-width: 1160px;
+  margin: 36px auto 0;
+  padding-left: 23px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #070707;
+  font-weight: 100;
+  white-space: pre;
+}
+
+@media only screen and (min-width: 768px) {
+  #campaigns {
+    height: 500px;
+  }
+  #campaigns .campaign .campaign_story {
+    margin: 166px auto 0;
+    padding-left: 27px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+  #campaigns > .dots {
+    bottom: 34px;
+    left: calc(50% - 95.935px /2);
+  }
+  #campaigns > .dots > .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 11px;
+  }
+}
+
+/* ====================== all products base element style ====================== */
+
+#products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px 6px;
+  padding: 15px 30px;
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+#products > .product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#products > .product > img {
+  width: 100%;
+}
+
+#products > .product > .product_colors {
+  display: flex;
+}
+
+#products > .product > .product_colors > .product_color {
+  width: 12px;
+  height: 12px;
+  margin-top: 8px;
+  margin-right: 6px;
+  box-shadow: 0px 0px 1px #bbbbbb;
+}
+
+#products > .product > .product_title {
+  margin-top: 10px;
+  line-height: 14px;
+  font-size: 12px;
+  letter-spacing: 2.4px;
+  color: #3f3a3a;
+}
+
+#products > .product > .product_price {
+  margin-top: 8px;
+  line-height: 14px;
+  font-size: 12px;
+  letter-spacing: 2.4px;
+  color: #3f3a3a;
+}
+
+@media only screen and (min-width: 768px) {
+  #products {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px 40px;
+    padding: 70px 24px;
+  }
+}
+
+/* ====================== not found element style ====================== */
+
+#not_found {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  display: none;
+}
+
+/* ====================== main base element style ====================== */
+
+main {
+  margin-top: 102px;
+  min-height: calc(100vh - 300px);
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    margin-top: 140px;
+    min-height: calc(100vh - 255px);
+  }
+}

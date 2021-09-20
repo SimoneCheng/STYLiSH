@@ -1,0 +1,413 @@
+/* ====================== cart base element style ====================== */
+#cart {
+  padding-top: 20px;
+  padding-bottom: 28px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 47px 24px 148px;
+}
+
+/* ====================== cart header base element style ====================== */
+#cart > .header {
+  font-size: 16px;
+  padding-right: 31px;
+  display: flex;
+  line-height: 19px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3f3a3a;
+}
+
+#cart > .header > .title {
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-weight: bold;
+  width: 280px;
+}
+
+#cart > .header > .item_quantity,
+#cart > .header > .item_price,
+#cart > .header > .item_subtotal {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #cart > .header > .item_quantity,
+  #cart > .header > .item_price,
+  #cart > .header > .item_subtotal {
+    display: block;
+  }
+  .item_quantity,
+  .item_price,
+  .item_subtotal {
+    width: 173px;
+    text-align: center;
+    flex-shrink: 1;
+  }
+  .item_remove {
+    width: 84px;
+    text-align: right;
+    flex-shrink: 1;
+  }
+}
+/* ====================== cart items base element style ====================== */
+#cart > .items {
+  padding: 0;
+  border: none;
+  margin-top: 0;
+  font-size: 16px;
+  color: #3f3a3a;
+}
+
+#cart > .items > .item {
+  margin-top: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #3f3a3a;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* item image */
+#cart > .items > .item > .item_image {
+  width: 114px;
+  margin-right: 20px;
+}
+
+/* item detail */
+#cart > .items > .item > .item_detail {
+  width: calc(100% - 218px);
+  line-height: 19px;
+  align-self: flex-start;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+#cart > .items > .item > .item_detail > .item_id {
+  margin-top: 18px;
+}
+
+#cart > .items > .item > .item_detail > .item_color {
+  margin-top: 22px;
+}
+
+#cart > .items > .item > .item_detail > .item_size {
+  margin-top: 10px;
+}
+
+#cart > .items > .item > .item_quantity {
+  order: 1;
+  width: 33%;
+  flex-shrink: 0;
+  margin-top: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.mobile-text {
+  display: block;
+}
+
+#cart > .items > .item > .item_quantity > select {
+  width: 80px;
+  height: 30px;
+  padding: 0 10px 0 17px;
+  border-radius: 8px;
+  border: solid 1px #979797;
+  background-color: #f3f3f3;
+  outline: none;
+}
+
+#cart > .items > .item > .item_price {
+  order: 2;
+  width: 33%;
+  flex-shrink: 0;
+  margin-top: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#cart > .items > .item > .item_subtotal {
+  order: 3;
+  width: 33%;
+  flex-shrink: 0;
+  margin-top: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  #cart > .items {
+    padding: 40px 31px;
+    border: solid 1px #979797;
+    margin-top: 16px;
+  }
+  #cart > .items > .item {
+    border-bottom: initial;
+    flex-wrap: nowrap;
+  }
+  #cart > .items > .item > .item_detail {
+    width: initial;
+  }
+  #cart > .items > .item > .item_quantity,
+  #cart > .items > .item > .item_price,
+  #cart > .items > .item > .item_subtotal {
+    order: initial;
+    width: 173px;
+    text-align: center;
+    align-self: initial;
+    flex-shrink: 1;
+  }
+  .mobile-text {
+    display: none;
+  }
+  .item_remove {
+    width: 84px;
+    text-align: right;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+}
+
+/* ====================== shipment base element style ====================== */
+#cart > .shipment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+}
+
+#cart > .shipment > .shipment_name {
+  font-size: 14px;
+  line-height: 17px;
+  color: #3f3a3a;
+}
+
+#cart > .shipment > .shipment_select + .shipment_name {
+  margin-top: 20px;
+}
+
+#cart > .shipment > .shipment_select {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 10px;
+  padding: 0 10px 0 17px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 1px #979797;
+  background-color: #f3f3f3;
+  margin-right: 82px;
+  font-size: 14px;
+  color: #3f3a3a;
+}
+
+@media only screen and (min-width: 768px) {
+  #cart > .shipment {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-top: 26px;
+    padding: 22px 0 22px 30px;
+  }
+  #cart > .shipment > .shipment_name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  #cart > .shipment > .shipment_select {
+    width: 171px;
+    padding: 0 14px 0 17px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  #cart > .shipment > .shipment_select + .shipment_name {
+    margin-top: 0;
+  }
+}
+
+/* ====================== reminder base element style ====================== */
+#cart > .reminder {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 26px;
+  color: #3f3a3a;
+}
+
+/* ====================== form header base element style ====================== */
+#cart > .form-header {
+  font-size: 14px;
+  padding-bottom: 10px;
+  line-height: 19px;
+  font-weight: bold;
+  color: #3f3a3a;
+  border-bottom: 1px solid #3f3a3a;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  #cart > .form-header {
+    font-size: 16px;
+  }
+}
+
+/* ====================== form base element style ====================== */
+#cart > .form > .field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+#cart > .form > .field > .field_name {
+  line-height: 17px;
+  font-size: 14px;
+  width: 80px;
+  color: #3f3a3a;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+#cart > .form > .field > .field_input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#cart > .form > .field > .field_input > input[type="text"],
+.tpfield {
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 1px #979797;
+  padding: 0 4px;
+}
+
+#cart > .form > .field > .field_input > input[type="radio"] {
+  margin: 0 6px 0 0;
+  width: 16px;
+  height: 16px;
+  border: solid 1px #979797;
+}
+
+#cart > .form > .field > .field_input > label {
+  margin-right: 18px;
+  line-height: 26px;
+  font-size: 14px;
+  color: #3f3a3a;
+}
+
+@media only screen and (min-width: 768px) {
+  #cart > .form > .field {
+    margin-top: 30px;
+    flex-direction: row;
+    align-items: center;
+  }
+  #cart > .form > .field > .field_input {
+    width: 574px;
+}
+  #cart > .form > .field > .field_name {
+    font-size: 16px;
+  }
+  #cart > .form > .field > .field_input > label {
+    margin-right: 30px;
+    font-size: 16px;
+  }
+}
+
+/* ====================== summary base element style ====================== */
+#cart > .summary {
+  border-top: 1px solid #3f3a3a;
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#cart > .summary > .subtotal {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  width: 240px;
+  justify-content: space-between;
+  padding-left: 13px;
+  align-items: center;
+}
+
+cart > .summary .name,
+.value {
+  line-height: 19px;
+  font-size: 16px;
+  color: #3f3a3a;
+  display: flex;
+  align-items: center;
+}
+
+#cart > .summary .value > span {
+  line-height: 36px;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+#cart > .summary > .freight {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3f3a3a;
+  width: 240px;
+  justify-content: space-between;
+  padding-left: 13px;
+  align-items: center;
+}
+
+#cart > .summary > .total {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 240px;
+  justify-content: space-between;
+  padding-left: 13px;
+  align-items: center;
+}
+
+#cart > .summary > #checkout {
+  font-size: 16px;
+  letter-spacing: 3.2px;
+  margin-top: 36px;
+  border-radius: 8px;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: #ffffff;
+  cursor: pointer;
+  border-style: none;
+}
+
+#cart > .summary > #checkout:active {
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 768px) {
+  #cart > .summary > #checkout {
+    width: 240px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-top: 50px;
+  }
+}
+
+/* ====================== main base element style ====================== */
+main {
+  margin-top: 64px;
+  min-height: calc(100vh - 300px);
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    margin-top: 140px;
+    min-height: calc(100vh - 255px);
+  }
+}

@@ -1,0 +1,22 @@
+/* ====================== base element style ====================== */
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:active {
+  border-style: dotted;
+}
